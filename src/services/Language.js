@@ -4,7 +4,7 @@ class Language {
   }
 
   translate(name) {
-    return name;
+    return `${name} (${this.language})`;
   }
 }
 
