@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Language from '../services/Language';
-
 const LanguageContext = React.createContext();
 
 function reducer(_, action) {
@@ -32,18 +30,4 @@ function useLanguageContext() {
   return context;
 }
 
-function useLanguage() {
-  const [state, dispatch] = useLanguageContext();
-
-  function translate(name) {
-    return (new Language(state.language)).translate(name);
-  }
-
-  function setLanguage(language) {
-    dispatch({ type: 'set', language });
-  }
-
-  return { translate, setLanguage };
-}
-
-export { LanguageProvider, useLanguage };
+export { LanguageProvider, useLanguageContext };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useLanguage } from './contexts/language';
+import useLanguage from './hooks/useLanguage';
 
 const styles = {
   language: {
